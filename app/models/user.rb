@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
     timestamps
   end
 
+  has_many :organisations, :dependent => :destroy
+
   # This gives admin rights and an :active state to the first sign-up.
   # Just remove it if you don't want that
   before_create do |user|

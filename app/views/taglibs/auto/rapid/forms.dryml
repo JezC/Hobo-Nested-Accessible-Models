@@ -1,9 +1,45 @@
 <!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
 
+<def tag="form" for="Organisation">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name, description, owner, websites" param/>
+    <div param="actions">
+      <submit label="#{ht 'organisation.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Page">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="path, title, description, sections, website" param/>
+    <div param="actions">
+      <submit label="#{ht 'page.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Section">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name, description, page" param/>
+    <div param="actions">
+      <submit label="#{ht 'section.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
 <def tag="form" for="User">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="" param/>
+    <field-list fields="name, email_address, administrator, state" param/>
     <div param="actions">
       <submit label="#{ht 'user.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
@@ -43,4 +79,16 @@
     </div>
   </form>
 </def>
+
+<def tag="form" for="Website">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="url, description, organisation" param/>
+    <div param="actions">
+      <submit label="#{ht 'website.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
 
